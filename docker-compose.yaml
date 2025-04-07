@@ -39,7 +39,7 @@ services:
     command: ["postgres", "-c", "max_connections=1000", "-c", "listen_addresses=*"]
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5433
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=pass
@@ -48,7 +48,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     expose:
-      - 5432
+      - 5433
 
 volumes:
   evolution_instances:
